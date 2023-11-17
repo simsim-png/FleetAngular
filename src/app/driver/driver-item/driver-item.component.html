@@ -1,0 +1,16 @@
+<mat-card appShadow class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar [style.backgroundImage]="getImgContent(driver.photo)" style="background-size: cover;" ></div>      
+      <mat-card-title>{{driver.firstName  | firstNamePipe}}</mat-card-title>
+      <mat-card-subtitle>{{driver.lastName | uppercase}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="driver.photo" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        driver of  {{driver.vehicule.matricule}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+       <button  mat-button (click)="onShow()">Show</button> 
+    </mat-card-actions>
+  </mat-card>

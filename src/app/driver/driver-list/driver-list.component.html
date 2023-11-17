@@ -1,0 +1,4 @@
+<h1>List of Drivers</h1>
+<div class="cardList">
+   <app-driver-item *ngFor="let drv of drivers" [driver]="drv" (driverSelected)="onDriverSelected(drv)"></app-driver-item>
+</div>
