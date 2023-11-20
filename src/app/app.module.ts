@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DriverModule } from './driver/driver.module';
 import { VehiculeModule } from './vehicule/vehicule.module';
 import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     DriverModule,
     VehiculeModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

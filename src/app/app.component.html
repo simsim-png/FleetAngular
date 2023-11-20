@@ -1,3 +1,2 @@
-<app-navbar (pageSelected) = "onPageSelected($event)" ></app-navbar>
-<app-driver *ngIf="currentPage === 'drivers'"></app-driver>
-<app-vehicule *ngIf="currentPage === 'vehicules'"></app-vehicule>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

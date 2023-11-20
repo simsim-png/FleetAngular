@@ -19,4 +19,13 @@ export class DriverService {
   getDrivers(): Driver[]{
     return this.drivers;
   }
+
+  getDriverById(id: number): Driver{
+    return  this.drivers[id];
+  }
+
+  saveDriver(driver: Driver){
+    this.drivers.push(driver);
+  }
+
 }
