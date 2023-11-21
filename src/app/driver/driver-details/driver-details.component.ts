@@ -12,7 +12,7 @@ import { DriverService } from '../driver.service';
 })
 export class DriverDetailsComponent implements OnInit{
 
-  @Input() driver !: Driver;
+  driver : Driver =new Driver();
   id!: number;
   editMode: boolean = false;
   vehicules : Vehicule[] = this.vehiculeService.getVehicules();
@@ -29,6 +29,9 @@ export class DriverDetailsComponent implements OnInit{
     if(!this.editMode){
       this.driver = new Driver();
       this.driver.vehicule = new Vehicule();
+    }
+    else{
+      this.driver = this.driverService.getDriverById(this.id);
     }
   }
 
