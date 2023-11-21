@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { VehiculeService } from '../vehicule/vehicule.service';
 import { Driver } from './driver';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,8 @@ export class DriverService {
     new Driver(1, "Mohammed", "BOUSSAID", this.vehiculeService.getVehicules()[1],'assets/img/driver-2.png'),
     new Driver(2, "Ayyoub", "TELMOUDY", this.vehiculeService.getVehicules()[2],'assets/img/driver-3.png')
   ]
+
+  driverSelected = new Subject<Driver>();
 
   constructor(private vehiculeService : VehiculeService) { }
 
@@ -27,5 +30,6 @@ export class DriverService {
   saveDriver(driver: Driver){
     this.drivers.push(driver);
   }
+
 
 }
